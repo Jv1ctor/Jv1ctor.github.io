@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --cor-1: #272c34;
+  --cor-2: #eb1b24;
+  --cor-3: #f7e6d3;
+  --cor-4: #fff;
+  --cor-5: #1e2127;
+  --cor-6: #21252b;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+p,
+a,
+span {
+  color: var(--cor-4);
+  display: block;
+}
+
+img[src$=".png"] {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cor-1);
+}
+
+.home a {
+  color: var(--cor-2);
+}
+
+/* botoes */
+.botao {
+  background: var(--cor-2);
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #b3151d;
+}
+
+.botao.dois {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.botao.dois:hover {
+  background: rgb(122, 121, 121);
+}

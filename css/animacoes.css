@@ -1,0 +1,53 @@
+/* animacao - fone */
+.fone{
+  transform: translateY(0);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+      transform: translateY(0);
+  }
+
+  50%{
+      transform: translateY(30px);
+  }
+
+  100%{
+      transform: translateY(0);
+  }
+}
+
+
+/* animacoes - fundo */
+@keyframes pisca{
+  100%{
+      border-right-color:transparent;
+  }
+}
+
+@keyframes digitacao{
+  100%{
+      max-width: 100%;
+  }
+}
+
+
+/* animacao - barra de pesquisa */
+@keyframes search{
+  0%{
+      width: 20px;
+
+  }
+  100%{
+      width: 100%;
+  }
+}
+
+
+/* delay */
+@keyframes delay{
+  100%{
+    opacity: 1;
+  }
+}
