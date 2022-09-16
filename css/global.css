@@ -35,11 +35,12 @@ span {
 
 img[src$=".png"] {
   width: 100%;
-  height: auto;
+  height:auto;
+
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:"Poppins";
   background: var(--cor-1);
 }
 
@@ -51,20 +52,45 @@ body {
 .botao {
   background: var(--cor-2);
   padding: 15px 25px;
+  width: max-content;
   font-size: 1.2rem;
   border-radius: 100px;
   transition: 0.3s;
 }
 
 .botao:hover {
-  background: #b3151d;
+  border-color:var(--cor-2);
+  box-shadow: 0 0 15px rgba(0,0,0, 0.6);
+  background: #d81822;
 }
 
 .botao.dois {
   background: transparent;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 
 .botao.dois:hover {
-  background: rgb(122, 121, 121);
+  border-color:var(--cor-2);
+  color: var(--cor-2);
+}
+
+.fone{
+  filter: drop-shadow( 0 0 7px rgba(0,0,0,0.6));
+}
+
+/* scrollbar */
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--cor-2);
+  border-radius: 200px;
+}
+
+@media(max-width:1000px){
+  .botao{
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }

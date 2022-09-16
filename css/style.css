@@ -16,6 +16,7 @@
 
 .nav-list{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -77,7 +78,7 @@
 }
 
 .pesquisa-container:hover{
-    animation: search 1s ease forwards;
+    animation: search 1s ease; 
 }
 
 .pesquisa-container:hover .pesquisa-txt{
@@ -89,11 +90,45 @@
 }
 
 
+@media(max-width:1000px){
+    .header{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .pesquisa-box{
+        width: 50%;
+    }
+    .pesquisa-txt{
+        width: 100%;
+    }
+    .pesquisa-container{
+        width: 100%;
+        padding: 10px 25px;
+    } 
+    .pesquisa-container:hover{
+        animation: search paused; 
+    }
+}
+
+@media(max-width:600px){
+    .nav-list{
+        justify-content: center;
+    }
+    
+    .nav-list a{
+        background: var(--cor-6);
+        border-radius: 8px;
+    }
+    .pesquisa-box{
+        width: 100%;
+    }
+}
+
 /* main */
 
 .main-bg{
-    margin-top: 60px;
     position: relative;
+    margin-top: 30px;
 }
 
 .fundo{
@@ -102,8 +137,8 @@
     position: absolute;
     z-index: -100;
     right: 50%;
-    transform: translate(50%,50%);
     bottom: 50%;
+    transform: translate(50%,50%);
     border-right: 10px solid var(--cor-6);
     max-width: 0;
     overflow: hidden;
@@ -113,7 +148,7 @@
 
 .main{
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     opacity: 0;
     animation: delay 7s both; 
 }
@@ -129,22 +164,79 @@
 }
 
 h1{
-    font-size: 6rem;
+    font-size: 5rem;
+    line-height: 1.2;
     color: var(--cor-3);
     margin-bottom: 10px;
 }
 
 h2{
     font-size: 2.5rem;
+    line-height: 1.2;
     font-weight: 300;
     margin-bottom: 20px;
 }
 
 span{
-    font-size: 3.75rem;
+    font-size: 3.25rem;
+    line-height: 1.2;
     color: var(--cor-2);
     margin-bottom: 20px;
 }
+
+#destaque-A{
+    color: var(--cor-2);
+    display: inline;
+}
+
+@media(max-width:1000px){
+    .fundo{
+        display: none;
+    }
+    .main{
+        grid-template-columns: 1fr;
+    }
+    .main-bg{
+        margin-top: 0;
+    }
+    .main-conteudo{
+        grid-row: 2;
+        display: grid;
+        justify-items: center;
+    }
+
+    .main-img{
+        padding: 30px;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    span{
+        font-size: 2rem;
+    }
+    
+}
+
+@media(max-width:600px){
+    .conteudo-flex{
+        flex-direction: column;
+    }
+    .conteudo-flex{
+        gap:20px;
+    }
+    .main-img{
+        padding: 30px;
+    }
+
+    .fone{
+        animation-play-state: paused;
+    }
+}
+
+
 
 
 /* footer */
@@ -160,3 +252,4 @@ span{
     height: 30px;
     width: 30px;
 }
+
