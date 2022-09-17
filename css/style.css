@@ -97,6 +97,10 @@
         flex-direction: column;
         gap: 30px;
     }
+    .nav-list a{
+        background: var(--cor-6);
+        border-radius: 8px;
+    }
     .pesquisa-box{
         width: 50%;
     }
@@ -163,6 +167,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    flex: 1;
 }
 
 h1{
