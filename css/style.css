@@ -25,9 +25,11 @@
     letter-spacing: 2px;
     padding: 10px 30px;
     transition: 0.4s ease;
+    text-align: center;
 }
 
 .nav-list li{
+    flex: 1;
     position: relative;
     transition: 0.3s ease-in-out;
 }
